@@ -48,6 +48,10 @@ app.put('/users/:id', async (req, res) => {
     res.status(201).json(req.body);
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello, world!')
+});
+
 // Rota para listar usuários
 app.get('/users', async (req, res) => {
     let users = []; // Inicializa o array de usuários
